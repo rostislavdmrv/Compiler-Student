@@ -1,0 +1,70 @@
+program{
+
+    initializeArray() ->int{
+            int[] arr = int[10];
+            int i = 0;
+            int a = -1;
+
+            while (i < arr.length){
+
+                print("Enter number "+(i+1)+":");
+                arr[i]=read(a);
+                i=i+1;
+                print("\n");
+
+
+            }
+
+            return arr;
+
+    }
+
+    sortArray(int[] array) ->void {
+
+        int i = 0;
+        while (i < array.length - 1){
+                int minIndex = i;
+                int j = i + 1;
+
+                while (j < array.length){
+                        if (array[j] < array[minIndex]){
+                            minIndex = j;
+                        }
+                        j++;
+                }
+                int temp = array[minIndex];
+                array[minIndex] = array[i];
+                array[i] = temp;
+
+                i++;
+
+
+        }
+
+    }
+
+     printArray(int[] array) -> void{
+            int i = 0;
+            while (i < array.length){
+                    print(array[i]+ " ");
+                    i = i+1;
+            }
+
+     }
+
+
+
+
+
+    main()->void{
+
+        int[] array = @initializeArray();
+        @sortArray(array);
+        print("The array after sorting in ascending order: ", @printArray(array))
+
+
+    }
+
+
+
+}
