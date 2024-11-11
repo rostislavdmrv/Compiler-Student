@@ -1,0 +1,23 @@
+program{
+
+    factorial(int n )-> int{
+        if(n<=1){
+            return 1;
+        }
+        else{
+            return n*factorial(n-1);
+        }
+
+    }
+
+    main()->void{
+
+        int num = 7;
+        print("Factorial of "+num+" is: ",@factorial(num);
+
+
+    }
+
+
+
+}

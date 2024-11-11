@@ -1,0 +1,53 @@
+program{
+
+    initializeArray() ->int{
+            int[] arr = int[10];
+            int i = 0;
+            int a = -1;
+
+            while (i < arr.length){
+
+                print("Enter number "+(i+1)+":");
+                arr[i]=read(a);
+                i=i+1;
+                print("\n");
+
+
+            }
+
+            return arr;
+
+    }
+
+    searchInArray(int[] arr, int target) ->void {
+        int i = 0;
+
+        while (i < arr.length){
+
+            if (arr[i] == target){
+                print("Yes ,is in the array number - ",target)
+            }
+            i=i+1;
+
+        }
+
+        print("No ,is not in the array number - ",target);
+
+
+    }
+
+
+    main()->void{
+        int num = -1;
+        int[] array = @initializeArray();
+        print("Enter the searching number :");
+        int target = read(num);
+
+        @searchInArray(array,target);
+
+
+    }
+
+
+
+}

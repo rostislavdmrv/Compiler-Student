@@ -1,0 +1,52 @@
+program{
+
+    initializeArray() ->int{
+            int[] arr = int[10];
+            int i = 0;
+            int a = -1;
+
+            while (i < arr.length){
+
+                print("Enter number "+(i+1)+":");
+                arr[i]=read(a);
+                i=i+1;
+                print("\n");
+
+
+            }
+
+            return arr;
+
+    }
+
+    findMax(int[] array) ->int {
+        int max = array[0];
+        int i = 1;
+
+        while (i < array.length){
+
+            if (array[i] > max){
+                max = array[i];
+            }
+            i=i+1;
+
+        }
+
+        return max;
+
+
+    }
+
+
+    main()->void{
+
+        int[] array = @initializeArray();
+        int max = @findMax(array);
+        print("The largest number in the array is: ", max);
+
+
+    }
+
+
+
+}
