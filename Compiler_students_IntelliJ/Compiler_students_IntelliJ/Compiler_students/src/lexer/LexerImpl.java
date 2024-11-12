@@ -60,8 +60,8 @@ public class LexerImpl extends Lexer<TokenType> {
                 case '>' : return handleTwoCharOp('=', TokenType.GREATER, TokenType.GREATER_EQ);/* ToDo handle operators '>' (GREATER) and '>=' (GREATER_EQ) */
                 case '<' : return handleTwoCharOp('=', TokenType.LESS, TokenType.LESS_EQ);/* ToDo handle operators '<' (LESS) and '<=' (LESS_EQ) */
                 case '!' : return handleTwoCharOp('=', TokenType.NOT, TokenType.NOTEQUALS);/* ToDo handle operators '!' (NOT) and '!=' (NOTEQUALS) */
-                case '&' : return handleTwoCharOp('&', TokenType.AND, TokenType.OTHER);/* ToDo handle operator '&&' (AND) or unknown symbol (OTHER)  */
-                case '|' : return handleTwoCharOp('|', TokenType.OR, TokenType.OTHER);/* ToDo handle operator '|' (OR) or unknown symbol (OTHER) */
+                case '&' : return handleTwoCharOp('&', TokenType.AND, TokenType.AND);/* ToDo handle operator '&&' (AND) or unknown symbol (OTHER)  */
+                case '|' : return handleTwoCharOp('|', TokenType.OR, TokenType.OR);/* ToDo handle operator '|' (OR) or unknown symbol (OTHER) */
                 case '/' : return handleSlash();
                 case '\'': return handleCharLiteral();
                 case '"' : return handleStringLiteral();
@@ -217,7 +217,7 @@ public class LexerImpl extends Lexer<TokenType> {
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\operators.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\operators.txt"));
         System.out.println(CompilerTestHelper.getTokensAsString(lexer));
     }
 
