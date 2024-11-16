@@ -217,7 +217,7 @@ public class LexerImpl extends Lexer<TokenType> {
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\operators.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\Fib.txt"));
         System.out.println(CompilerTestHelper.getTokensAsString(lexer));
     }
 
