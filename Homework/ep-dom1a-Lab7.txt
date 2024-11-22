@@ -1,0 +1,36 @@
+--->(1) 'PROGRAM' ,'{', 'program_body','}'
+--->(2) 'PROGRAM' ,'{', 'function_definition','main_function','}'
+--->(4) 'PROGRAM' ,'{', 'Sum', '(' ,'formal_parameters', ')' ,'->' ,'type','block','main_function','}'
+--->(5) 'PROGRAM' ,'{', 'Sum', '(' ,'type', 'a',  ',' ,'type' ,'b',  ')' ,'->' ,'type','block','main_function','}'
+--->(6)*3 'PROGRAM' ,'{', 'Sum', '(' ,'primitive_type', 'a',  ',' ,'primitive_type', 'b', ')'  ,'->' ,'primitive_type','block','main_function','}'
+--->(7)*3 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','block','main_function','}'
+--->(9) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{','statement','}','main_function','}'
+--->(10) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{','simple_statement', ';' ,'}','main_function','}'
+--->(11) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{','return_statement', ';' ,'}','main_function','}'
+--->(16) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'assignable', ';' ,'}','main_function','}'
+--->(22) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'expression', ';' ,'}','main_function','}'
+--->(26) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'simple_expression', ';' ,'}','main_function','}'
+--->(27) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'signed_term','additive_operator', 'signed_term', ';' ,'}','main_function','}'
+--->(28)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'term','additive_operator', 'term', ';' ,'}','main_function','}'
+--->(29)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'factor','additive_operator', 'factor', ';' ,'}','main_function','}'
+--->(30)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'variable','additive_operator', 'variable', ';' ,'}','main_function','}'
+--->(35)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','additive_operator', 'b', ';' ,'}','main_function','}'
+--->(33) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main_function','}'
+--->(3) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , 'block', '}'
+--->(9) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'statement' ,'}' , '}'
+--->(10) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'simple_statement', ';' ,'}' , '}'
+--->(11) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'function_call', ';' ,'}' , '}'
+--->(15) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','actual_parameters', ')',';' ,'}' , '}'
+--->(21) 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','assignable', ',' , 'assignable', ')',';' ,'}' , '}'
+--->(22)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','expression', ',' , 'expression', ')',';' ,'}' , '}'
+--->(26)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','simple_expression', ',' , 'simple_expression', ')',';' ,'}' , '}'
+--->(27)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','signed_term', ',' , 'signed_term', ')',';' ,'}' , '}'
+--->(28)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','term', ',' , 'term', ')',';' ,'}' , '}'
+--->(29)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','factor', ',' , 'factor', ')',';' ,'}' , '}'
+--->(30)*2 'PROGRAM' ,'{', 'Sum', '(' ,'INT', 'a',  ',' ,'INT', 'b', ')'  ,'->' ,'INT','{' ,'RETURN', 'a','+', 'b', ';' ,'}','main', '(' ,')' ,'->' ,'VOID' , '{' ,'@','(','INT_LITERAL', ',' , 'INT_LITERAL', ')',';' ,'}' , '}'
+
+
+
+
+
+
