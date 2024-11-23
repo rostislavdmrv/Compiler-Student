@@ -1,0 +1,67 @@
+--->(1) 'PROGRAM' ,'{', 'program_body','}'
+--->(2) 'PROGRAM' ,'{', 'function_definition','main_function','}'
+--->(3) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , 'block', '}'
+--->(9) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'statement','statement','statement' ,'}', '}'
+--->(10)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'simple_statement', ';','simple_statement', ';' ,'statement','statement' ,'}', '}'
+--->(11)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'variable_definition', ';' ,'variable_definition', ';' ,'statement','statement' ,'}', '}'
+--->(13)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'type','assignment', ';', 'type','assignment', ';' ,'statement','statement' ,'}', '}'
+--->(6)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'primitive_type','assignment', ';', 'primitive_type','assignment', ';' ,'statement','statement' ,'}', '}'
+--->(7)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','assignment', ';', 'INT','assignment', ';' ,'statement','statement' ,'}', '}'
+--->(14)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','variable','=','assignable' ';', 'INT','variable','=','assignable', ';' ,'statement','statement' ,'}', '}'
+--->(35)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','assignable' ';', 'INT','i','=','assignable', ';' ,'statement','statement' ,'}', '}'
+--->(22)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','expression' ';', 'INT','i','=','expression', ';' ,'statement','statement' ,'}', '}'
+--->(26)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','simple_expression' ';', 'INT','i','=','simple_expression', ';' ,'statement','statement' ,'}', '}'
+--->(27)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','signed_term' ';', 'INT','i','=','signed_term', ';' ,'statement','statement' ,'}', '}'
+--->(28)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','term' ';', 'INT','i','=','term', ';' ,'statement','statement' ,'}', '}'
+--->(29)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','factor' ';', 'INT','i','=','factor', ';' ,'statement','statement' ,'}', '}'
+--->(30)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'statement','statement' ,'}', '}'
+--->(10) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'compound_statement','statement' ,'}', '}'
+--->(12) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'while_statement','statement' ,'}', '}'
+--->(20) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','expression',')','block','statement' ,'}', '}'
+--->(26) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','simple_expression','relational_operator','simple_expression',')','block','statement' ,'}', '}'
+--->(27)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','signed_term','relational_operator','signed_term',')','block','statement' ,'}', '}'
+--->(28)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','term','relational_operator','term',')','block','statement' ,'}', '}'
+--->(29)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','factor','relational_operator','factor',')','block','statement' ,'}', '}'
+--->(30)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','variable','relational_operator','INT_LITERAL',')','block','statement' ,'}', '}'
+--->(35) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','relational_operator','INT_LITERAL',')','block','statement' ,'}', '}'
+--->(31) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','block','statement' ,'}', '}'
+--->(9) 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','statement','statement','}','statement' ,'}', '}'
+--->(10)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','simple_statement',';','simple_statement',';','}','statement' ,'}', '}'
+--->(11)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','assignment',';','assignment',';','}','statement' ,'}', '}'
+--->(14)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','variable','=','assignable',';','variable','=','assignable',';','}','statement' ,'}', '}'
+--->(15)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','assignable',';','i','=','assignable',';','}','statement' ,'}', '}'
+--->(22)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','expression',';','i','=','expression',';','}','statement' ,'}', '}'
+--->(26)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','simple_expression',';','i','=','simple_expression',';','}','statement' ,'}', '}'
+--->(27)*2 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','signed_term','additive_operator',''signed_term,';','i','=','signed_term','additive_operator',''signed_term,',';','}','statement' ,'}', '}'
+--->(28)*4 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','term','additive_operator',''term,';','i','=','term','additive_operator',''term,',';','}','statement' ,'}', '}'
+--->(29)*4 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','factor','additive_operator',''factor,';','i','=','factor','additive_operator','factor',',';','}','statement' ,'}', '}'
+--->(30)*4 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','variable','additive_operator',''variable,';','i','=','variable','additive_operator','INT_LITERAL',',';','}','statement' ,'}', '}'
+--->(35)*3 'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','additive_operator','i',';','i','=','i','additive_operator','1',',';','}','statement' ,'}', '}'
+--->(33)* 2'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','statement' ,'}', '}'
+--->(10)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','simple_statement',';' ,'}', '}'
+--->(11)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','print_statement',';' ,'}', '}'
+--->(17)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','assignable', ',' ,'assignable',')',';' ,'}', '}'
+--->(22)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','string_literal', ',' ,'assignable',')',';' ,'}', '}'
+--->(25)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'assignable',')',';' ,'}', '}'
+--->(22)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'expression',')',';' ,'}', '}'
+--->(26)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'simple_expression',')',';' ,'}', '}'
+--->(27)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'signed_term',')',';' ,'}', '}'
+--->(28)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'term',')',';' ,'}', '}'
+--->(29)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'factor',')',';' ,'}', '}'
+--->(30)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','INT_LITERAL' ';', 'INT','i','=','INT_LITERAL', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','INT_LITERAL',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'variable',')',';' ,'}', '}'
+--->(35)'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','0' ';', 'INT','i','=','1', ';' ,'WHILE','(','i','LESS_THAN_OR_EQUAL','10',')','{','sum','=','sum','PLUS','i',';','i','=','i','PLUS','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'sum',')',';' ,'}', '}'
+
+
+///'PROGRAM' ,'{', 'main', '(' ,')' ,'->' ,'VOID' , '{' ,'INT','sum','=','0' ';', 'INT','i','=','1', ';' ,'WHILE','(','i','<=','10',')','{','sum','=','sum','+','i',';','i','=','i','+','1',',';','}','PRINT','(','"Тhe sum of the integers is:"', ',' ,'sum',')',';' ,'}', '}'
+
+
+
+
+
+
+
+
+
+
+
+
