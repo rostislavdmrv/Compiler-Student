@@ -117,7 +117,7 @@ public class ParserImpl extends Parser<TokenType, AST> {
         TypeNode typeNode;
         if (currentToken.getTokenType() == TokenType.VOID) {
             typeNode = new VoidTypeNode(currentToken);
-            accept(TokenType.LPAREN);
+            accept(TokenType.VOID);
         } else {
             type();
             typeNode = (TypeNode) currentNode;
@@ -377,7 +377,7 @@ public class ParserImpl extends Parser<TokenType, AST> {
             case CHAR:
             case BOOLEAN:       variableDefinition();
                                 break;
-            case IDENTIFIER:    assignable();
+            case IDENTIFIER:    assignment();
                                 break;
             case AT:            functionCall();
                                 break;
@@ -444,7 +444,14 @@ public class ParserImpl extends Parser<TokenType, AST> {
         Token token = currentToken;
         accept(TokenType.PRINT);
         accept(TokenType.LPAREN);
-        accept(TokenType.RPAREN);
+        assignable();
+        while (currentToken.getTokenType() == TokenType.COMMA) {
+
+            accept(TokenType.COMMA);
+
+            assignable();
+
+        }
         ActualParameterNode actualParameters = (ActualParameterNode) currentNode;
         accept(TokenType.RPAREN);
         currentNode = new PrintStatementNode(token, actualParameters);
