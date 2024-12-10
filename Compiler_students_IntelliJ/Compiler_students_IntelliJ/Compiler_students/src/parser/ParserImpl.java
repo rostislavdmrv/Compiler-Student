@@ -364,7 +364,7 @@ public class ParserImpl extends Parser<TokenType, AST> {
 
     void statement() {
         if (TokenType.isCompoundStatementTerminal(currentToken.getTokenType())) {
-           compoundStatement();
+            compoundStatement();
         } else {
             simpleStatement();
             accept(TokenType.SEMICOLON);
@@ -444,17 +444,19 @@ public class ParserImpl extends Parser<TokenType, AST> {
         Token token = currentToken;
         accept(TokenType.PRINT);
         accept(TokenType.LPAREN);
+
+        List<AssignableNode> params = new ArrayList<>();
         assignable();
+        params.add((AssignableNode) currentNode);
+
         while (currentToken.getTokenType() == TokenType.COMMA) {
-
             accept(TokenType.COMMA);
-
             assignable();
+            params.add((AssignableNode) currentNode);
 
         }
-        ActualParameterNode actualParameters = (ActualParameterNode) currentNode;
         accept(TokenType.RPAREN);
-        currentNode = new PrintStatementNode(token, actualParameters);
+        currentNode = new PrintStatementNode(token, new ActualParameterNode(null,params));
     }
 
     void readStatement() {
@@ -495,14 +497,14 @@ public class ParserImpl extends Parser<TokenType, AST> {
     void arrayLength() {
         Token token = currentToken;
         accept(TokenType.LENGTH);
-        accept(TokenType.RPAREN);
+        accept(TokenType.LPAREN);
         variable();
         accept(TokenType.RPAREN);
         currentNode = new ArrayLengthNode(token, (VariableNode) currentNode);
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\Fib.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\upr4task1.txt"));
         Parser<TokenType, AST> parser = new ParserImpl(lexer);
         System.out.println(CompilerTestHelper.getASTasString(parser));
     }
