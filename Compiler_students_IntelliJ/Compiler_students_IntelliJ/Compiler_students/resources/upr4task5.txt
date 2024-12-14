@@ -1,42 +1,40 @@
 program{
 
     initializeArray() ->int{
-            int[] arr = int[10];
-            int i = 0;
-            int a = -1;
+        int[] arr = int[10];
+                arr[0]=1;
+                arr[1]=5;
+                arr[2]=2;
+                arr[3]=4;
+                arr[4]=6;
+                arr[5]=10;
+                arr[6]=15;
+                arr[7]=21;
+                arr[8]=88;
+                arr[9]=36;
 
-            while (i < arr.length){
-
-                print("Enter number "+(i+1)+":");
-                arr[i]=read(a);
-                i=i+1;
-                print("\n");
-
-
-            }
-
-            return arr;
+                return arr;
 
     }
 
     sortArray(int[] array) ->void {
 
         int i = 0;
-        while (i < array.length - 1){
+        while (i < length(array)-1){
                 int minIndex = i;
                 int j = i + 1;
 
-                while (j < array.length){
+                while (j < length(array)){
                         if (array[j] < array[minIndex]){
                             minIndex = j;
                         }
-                        j++;
+                        j=j+1;
                 }
                 int temp = array[minIndex];
                 array[minIndex] = array[i];
                 array[i] = temp;
 
-                i++;
+                i=i+1;
 
 
         }
@@ -45,8 +43,9 @@ program{
 
      printArray(int[] array) -> void{
             int i = 0;
-            while (i < array.length){
-                    print(array[i]+ " ");
+            while (i < length(array)){
+                    print(array[i]);
+                    print(" ");
                     i = i+1;
             }
 
@@ -60,9 +59,7 @@ program{
 
         int[] array = @initializeArray();
         @sortArray(array);
-        print("The array after sorting in ascending order: ", @printArray(array))
-
-
+        print("The array after sorting in ascending order: ", @printArray(array));
     }
 
 

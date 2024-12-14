@@ -16,7 +16,7 @@ program{
     main()->void{
 
         int num = 5;
-        print("Iterative factorial of "+ num+" is: ",@factorial(num);
+        print("Iterative factorial of 5 is: ",@factorial(num));
 
 
     }
