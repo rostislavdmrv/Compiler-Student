@@ -5,7 +5,7 @@ program{
             return 1;
         }
         else{
-            return n*factorial(n-1);
+            return n*@factorial(n-1);
         }
 
     }
@@ -13,7 +13,7 @@ program{
     main()->void{
 
         int num = 7;
-        print("Factorial of "+num+" is: ",@factorial(num);
+        print("Factorial of 7 is: ",@factorial(num));
 
 
     }

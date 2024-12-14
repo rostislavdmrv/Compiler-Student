@@ -504,7 +504,7 @@ public class ParserImpl extends Parser<TokenType, AST> {
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\upr4task1.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\upr4task2.txt"));
         Parser<TokenType, AST> parser = new ParserImpl(lexer);
         System.out.println(CompilerTestHelper.getASTasString(parser));
     }

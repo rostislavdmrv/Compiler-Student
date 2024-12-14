@@ -222,12 +222,14 @@ public class SemanticAnalyzer implements SemanticVisitor {
     public void visit(NotNode node) {
         node.getOperand().accept(this);
         SemanticUtils.handleUnaryOperators(node, ExpressionType.BOOLEAN.ordinal());
-        node.setType(ExpressionType.BOOLEAN.ordinal());
+        node.setType(ExpressionType.INT.ordinal());
     }
 
     @Override
     public void visit(MinusNode node) {
-        /* ToDo */
+        node.getOperand().accept(this);
+        SemanticUtils.handleUnaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
 
     }
 
