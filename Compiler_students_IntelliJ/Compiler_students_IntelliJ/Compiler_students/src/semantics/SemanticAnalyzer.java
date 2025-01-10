@@ -242,31 +242,49 @@ public class SemanticAnalyzer implements SemanticVisitor {
 
     @Override
     public void visit(SubtractionNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.INT.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(MultiplicationNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.INT.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(DivisionNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.INT.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(ModNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.INT.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(AndNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.BOOLEAN.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(OrNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.BOOLEAN.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
@@ -279,6 +297,9 @@ public class SemanticAnalyzer implements SemanticVisitor {
 
     @Override
     public void visit(NotEqualNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal(), ExpressionType.BOOLEAN.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
@@ -291,16 +312,25 @@ public class SemanticAnalyzer implements SemanticVisitor {
 
     @Override
     public void visit(GreaterOrEqualNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(LessNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
     @Override
     public void visit(LessOrEqualNode node) {
+        node.getChildNodes().forEach(n -> n.accept(this));
+        SemanticUtils.handleBinaryOperators(node, ExpressionType.INT.ordinal());
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
@@ -311,6 +341,7 @@ public class SemanticAnalyzer implements SemanticVisitor {
 
     @Override
     public void visit(BooleanNode node) {
+        node.setType(ExpressionType.BOOLEAN.ordinal());
         /* ToDo */
     }
 
@@ -371,12 +402,13 @@ public class SemanticAnalyzer implements SemanticVisitor {
 
     @Override
     public void visit(StringLiteralNode node) {
+        node.setType(ExpressionType.CHAR.ordinal());
         /* ToDo */
         node.setIsArray(true);
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("resources/HelloWorld.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("C:\\Users\\User\\TUVaRNA\\Course4\\sem7\\ЕП\\Compiler-Student\\Compiler_students_IntelliJ\\Compiler_students_IntelliJ\\Compiler_students\\resources\\upr4task2.txt"));
         Parser<TokenType, AST> parser = new ParserImpl(lexer);
         ProgramBodyNode root = (ProgramBodyNode) parser.entryRule();
         SemanticVisitor semanticVisitor = new SemanticAnalyzer();
